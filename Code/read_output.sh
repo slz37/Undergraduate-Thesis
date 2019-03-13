@@ -10,8 +10,6 @@ filename="$PWD/$1"
 #
 #     Primary Energy: 903.379 keV
 
-#Create data file
-
 while read -r line
 do
   #Beginning of each event
