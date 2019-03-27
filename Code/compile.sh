@@ -46,8 +46,8 @@ then
         mkdir -p "Archives"
 
         #Move files
-        mv neutron.root "Archives/neutron_$today.root"
-        mv neutron_C3F8.out "Archives/neutron_C3F8_$today.out"
+        mv neutron.root "Archives/$today/neutron_$fileName.root"
+        mv neutron_C3F8.out "Archives/$today/neutron_C3F8_$fileName.out"
     fi
     
     time ./PICO250 neutron.mac --takeyourtime
@@ -60,8 +60,9 @@ then
         #Make archive directory if necessary
         mkdir -p "Archives"
 
-      mv gamma.root "Archives/gamma_$today.root"
-      mv gamma_C3F8.out "Archives/gamma_C3F8_$today.out"
+        #Move files
+        mv gamma.root "Archives/$today/gamma_$fileName.root"
+        mv gamma_C3F8.out "Archives/$today/gamma_C3F8_$fileName.out"
     fi
 
     time ./PICO250 gamma.mac --takeyourtime
@@ -79,8 +80,8 @@ then
         mkdir -p "Archives"
 
         #Move files
-        mv neutron.root "Archives/neutron_$today.root"
-        mv neutron_C3F8.out "Archives/neutron_C3F8_$today.out"
+        mv neutron.root "Archives/$today/neutron_$fileName.root"
+        mv neutron_C3F8.out "Archives/$today/neutron_C3F8_$fileName.out"
     fi
     
     time ./PICO250 neutron_gps.mac --takeyourtime
@@ -93,8 +94,9 @@ then
         #Make archive directory if necessary
         mkdir -p "Archives"
 
-        mv gamma.root "Archives/gamma_$today.root"
-        mv gamma_C3F8.out "Archives/gamma_C3F8_$today.out"
+        #Move files
+        mv gamma.root "Archives/$today/gamma_$fileName.root"
+        mv gamma_C3F8.out "Archives/$today/gamma_C3F8_$fileName.out"
     fi
 
     time ./PICO250 gamma_gps.mac --takeyourtime
@@ -109,7 +111,8 @@ then
         #Make archive directory if necessary
         mkdir -p "Archives"
         mkdir -p "Archives/$today"
-
+  
+        #Move files
         mv neutron_cm244.root "Archives/$today/neutron_cm244_$fileName.root"
         mv neutron_C3F8_cm244.out "Archives/$today/neutron_C3F8_cm244_$fileName.out"
     fi
