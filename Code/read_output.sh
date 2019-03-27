@@ -3,7 +3,7 @@
 #Reads the output of a GEANT4 simulation from the command ./PICO250 cm244.mac > out.txt
 
 #Directory + filename
-filename="$PWD/$1"
+filename="$1/output.txt"
 
 #Read each line and store event #, pos, energy
 #---> Begin of event: 1
@@ -37,10 +37,10 @@ do
   #Add to data file
   if [ "$eventNum" != "" ] && [ "$energy" != "" ]
   then
-    echo "$eventNum,$energy" >> initial_data.txt
+    echo "$eventNum    $energy" >> "$1/initial_data.txt"
   
     #Reset variables
     eventNum=""
     energy=""
   fi
-done < $filename
+done < "$filename"

@@ -5,7 +5,7 @@
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/salvatore/Documents/pico_simulations/CADMesh/lib
 
 #Get date and time to append to output filenames if necessary
-today=`/bin/date '+%Y_%m_%d__%H_%M_%S'`;
+today=`/bin/date '+%Y_%m_%d'`; #__%H_%M_%S'`;
 
 #Get rid of old make files
 make clean
@@ -15,6 +15,7 @@ guiType=$1
 runScript=$2
 particleScript=$3
 moveOutput=$4
+fileName=$5
 
 #Choose between either pico or guns
 if [ "$guiType" == "pico" ]
@@ -92,11 +93,26 @@ then
         #Make archive directory if necessary
         mkdir -p "Archives"
 
-      mv gamma.root "Archives/gamma_$today.root"
-      mv gamma_C3F8.out "Archives/gamma_C3F8_$today.out"
+        mv gamma.root "Archives/gamma_$today.root"
+        mv gamma_C3F8.out "Archives/gamma_C3F8_$today.out"
     fi
 
     time ./PICO250 gamma_gps.mac --takeyourtime
+  #Run cm244 script
+  elif [ "$particleScript" == "cm" ]
+  then
+    time ./PICO250 cm244.mac --takeyourtime
+
+    #Move root and out file to avoid overwriting/appending
+    if [ "$moveOutput" == "move" ]
+    then
+        #Make archive directory if necessary
+        mkdir -p "Archives"
+        mkdir -p "Archives/$today"
+
+        mv neutron_cm244.root "Archives/$today/neutron_cm244_$fileName.root"
+        mv neutron_C3F8_cm244.out "Archives/$today/neutron_C3F8_cm244_$fileName.out"
+    fi
   fi
 elif [ "$guiType" == "pico" ] && [ "$runScript" == "norun" ]
 then

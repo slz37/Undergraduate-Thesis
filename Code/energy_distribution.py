@@ -1,8 +1,6 @@
 '''
-Functions for performing all necessary file operations to read data from GEANT4.
-
-Columns:
-event_id vertx verty vertz atomcode blank edep blank x y z blank i blank parentid cstep initenergy
+Makes a histogram of the energy distrbution of a source
+from read_output.sh
 '''
 
 import os, sys
@@ -13,7 +11,11 @@ import glob
 from astropy.visualization import hist as fancyhist
 import pandas as pd
 import re
-from data_operations import *
+from file_operations import *
+
+COLUMNS = ["event_id",
+           "energy"]
+plt.figure(figsize = (20, 10))
 
 def open_file(filename):
   '''
@@ -36,21 +38,23 @@ def get_column_data(data, column_id):
   #Grab column data
   xdata = data.iloc[:, column_id].values[:]
 
-  #Scale energy to keV
-  if column_id == 6:
-    xdata *= 1000
-
   return xdata
 
-def any_subdir(path):
-  '''
-  Returns a boolean value if the current directory
-  contains any subdirectories
-  '''
+if __name__ == "__main__":
+  #Grab all pmthit files in the specified directory
+  if len(sys.argv) == 2:
+    path = sys.argv[1]
+    filel = glob.glob(sys.argv[1] + "/initial_data.txt")
+  else:
+    print("Incorrect number of arguments.")
+    sys.exit()
 
-  #Loop through items and return true if one is a directory
-  for root, dirs, files in os.walk(path):
-    if dirs:
-      return True
+  data = open_file(filel[0])
+  xdata = get_column_data(data, 1)
+  fancyhist(xdata, bins = "scott", density = False, histtype = "step", label = "Cm244")
 
-  return False
+  #Display Plot
+  plt.legend()
+  plt.xlabel(COLUMNS[1])
+  plt.savefig("energy_spectrum.png")
+  plt.show()
