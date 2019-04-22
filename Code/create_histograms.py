@@ -65,6 +65,10 @@ if __name__ == "__main__":
   for pmt_file in file_list:
     data = open_file(pmt_file)
 
+
+    #Remove electron recoils
+    data = data[data[4] != 11]
+
     xdata = get_column_data(data, column_id)
 
     n = create_histogram(pmt_file, xdata, tot_events, thresh, rate)

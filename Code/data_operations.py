@@ -25,7 +25,7 @@ def calculate_bubble_rates(xdata, tot_events, THRESH, RATE):
   events, and events that were above the threshold.
   '''
 
-  threshold_count = sum(xdata > THRESH)
+  threshold_count = sum(xdata >= THRESH)
   time = (tot_events / RATE) / PER_SEC_TO_PER_HR
 
   bubble_rate = threshold_count / time
@@ -52,7 +52,7 @@ def get_statistics(xdata, THRESH):
 
   total = len(xdata)
   mean = np.mean(xdata)  
-  threshold_count = sum(xdata > THRESH)
+  threshold_count = sum(xdata >= THRESH)
 
   return total, mean, threshold_count
 
