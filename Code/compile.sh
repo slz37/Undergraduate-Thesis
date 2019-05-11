@@ -39,6 +39,8 @@ then
   #Run neutron script
   if [ "$particleScript" == "neutron" ]
   then
+    time ./PICO250 neutron.mac --takeyourtime
+    
     #Move root and out file to avoid overwriting/appending
     if [ "$moveOutput" == "move" ]
     then
@@ -49,11 +51,12 @@ then
         mv neutron.root "Archives/$today/neutron_$fileName.root"
         mv neutron_C3F8.out "Archives/$today/neutron_C3F8_$fileName.out"
     fi
-    
-    time ./PICO250 neutron.mac --takeyourtime
+
   #Run gamma script
   elif [ "$particleScript" == "gamma" ]
   then
+    time ./PICO250 gamma.mac --takeyourtime
+    
     #Move root and out file to avoid overwriting/appending
     if [ "$moveOutput" == "move" ]
     then
@@ -63,9 +66,7 @@ then
         #Move files
         mv gamma.root "Archives/$today/gamma_$fileName.root"
         mv gamma_C3F8.out "Archives/$today/gamma_C3F8_$fileName.out"
-    fi
-
-    time ./PICO250 gamma.mac --takeyourtime
+    fi 
   fi
 #Use gps
 elif [ "$guiType" == "gun" ] && [ "$runScript" == "novis" ]
@@ -73,6 +74,8 @@ then
   #Run neutron script
   if [ "$particleScript" == "neutron" ]
   then
+    time ./PICO250 neutron_gps.mac --takeyourtime
+
     #Move root and out file to avoid overwriting/appending
     if [ "$moveOutput" == "move" ]
     then
@@ -83,11 +86,12 @@ then
         mv neutron.root "Archives/$today/neutron_$fileName.root"
         mv neutron_C3F8.out "Archives/$today/neutron_C3F8_$fileName.out"
     fi
-    
-    time ./PICO250 neutron_gps.mac --takeyourtime
+       
   #Run gamma script
   elif [ "$particleScript" == "gamma" ]
   then
+    time ./PICO250 gamma_gps.mac --takeyourtime
+    
     #Move root and out file to avoid overwriting/appending
     if [ "$moveOutput" == "move" ]
     then
@@ -99,11 +103,10 @@ then
         mv gamma_C3F8.out "Archives/$today/gamma_C3F8_$fileName.out"
     fi
 
-    time ./PICO250 gamma_gps.mac --takeyourtime
   #Run cm244 script
   elif [ "$particleScript" == "cm" ]
   then
-    time ./PICO250 cm244.mac --takeyourtime
+    time ./PICO250 cm244-ion.mac --takeyourtime
 
     #Move root and out file to avoid overwriting/appending
     if [ "$moveOutput" == "move" ]
