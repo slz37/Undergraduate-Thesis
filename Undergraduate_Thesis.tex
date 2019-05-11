@@ -47,6 +47,12 @@ aps,
 %Page formatting
 \usepackage[margin=1in]{geometry}
 
+%Section title formating - spacing
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip}
+\setlength{\belowcaptionskip}{-10pt}
+
 %Table of Contents
 \usepackage{hyperref}
 \hypersetup{ %Hyplink to location
@@ -94,7 +100,7 @@ aps,
 	\begin{abstract}
 	\addcontentsline{toc}{section}{Abstract}
 	\doublespacing
-	\par The use of bubble chambers for direct dark matter detection requires high sensitivity to energy levels in the range of 1-100 keV and strict measures to reduce background radiation. Neutrons can be used to simulate WIMP elastic scattering interactions with the target volume in order to ensure high detection efficiency. We aim to develop a low energy neutron source that will allow us to properly calibrate bubble chambers to ensure their ability to detect such events. We propose a solution consisting of a neutron source composed of a radioisotope capable of emitting gamma radiation at the required energy thresholds and a target capable of ejecting photoneutrons when struck by the gamma radiation. We have chosen seven main candidates for a gamma source, taking note of important properties such as half-life, availability, cost, and many others. We have also calculated the theoretical energies of the neutrons emitted by each source and the rate at which each source would emit neutrons. We utilize the GEANT4 simulation software to explore various scenarios and determine effective neutron emission rates and the energies upon interaction with the C$_{3}$F$_{8}$. Results yielded from the Drexel Bubble Chamber will be useful for other members of the PICO collaboration and other direct detection experiments. \hl{[include other results as they come along]}
+	\par The use of bubble chambers for direct dark matter detection requires high sensitivity to energy levels in the range of 1-100 keV and strict measures to reduce background radiation. Neutrons can be used to simulate WIMP elastic scattering interactions with the target volume in order to ensure high detection efficiency. We aim to develop a low energy neutron source that will allow us to properly calibrate bubble chambers to ensure their ability to detect such events. We propose a solution consisting of a neutron source composed of a radioisotope capable of emitting gamma radiation at the required energy thresholds and a target capable of ejecting photoneutrons when struck by the gamma radiation. We have chosen seven main candidates for a gamma source, taking note of important properties such as half-life, availability, cost, and many others. We have also calculated the theoretical energies of the neutrons emitted by each source and the rate at which each source would emit neutrons. We utilize the GEANT4 simulation software to explore various scenarios and determine effective neutron emission rates and the energies upon interaction with the C$_{3}$F$_{8}$. Results yielded from the Drexel Bubble Chamber will be useful for other members of the PICO collaboration and other direct detection experiments.
 	\end{abstract}
 	
 	\section{Introduction}
@@ -105,7 +111,7 @@ aps,
 	
 	\begin{figure}
 		\includegraphics[scale = 0.4, center]{Images/constraints.png}
-		\caption{\label{tab:table-name} Latest spin dependent constraints on the WIMP-nucleon cross section from PICO-60$^{\cite{1902.04031}}$. Other results include the first blind exposure of PICO-60 C3F8 (thick blue), as well as limits from PICO-60 CF3I (thick red), PICO-2L (thick purple), PICASSO (green band), SIMPLE (orange), PandaX-II (cyan), IceCube (dashed and dotted pink), and SuperK (dashed and dotted black). \hl{Not sure if I should manually label legend like paper does.}}
+		\caption{\label{tab:table-name} Latest spin dependent constraints on the WIMP-nucleon cross section from PICO-60$^{\cite{1902.04031}}$. Other relevant results include the first blind exposure of PICO-60 C3F8 (thick blue), as well as limits from PICO-60 CF3I (thick red), PICO-2L (thick purple), and PICASSO (green band).}
 	\end{figure}
 	
 	\par The ability to achieve low background is critical to direct detection methods of WIMPs. Several design decisions have been included to maximize detection efficiency and ensure accuracy of events. Fluorine based liquids are especially appealing as a target volume due to their insensitivity to gamma and beta particles$^{\cite{1601.03729}}$. The use of piezoelectric sensors allows for discrimination of alphas by acoustic analysis. Muons are eliminated through the use of a water tank containing PMT's. Reconstruction of events in the target volume allows for discrimination of neutron events due to bubble multiplicity. 
@@ -145,7 +151,7 @@ aps,
 	\section{Methods}
 	\subsection{Identifying the Proper Gamma Source}
 	\par Our first approach to tackling this problem is to create an exhaustive list of all potential candidates for gamma sources and note the specific properties that we require them to have. Included in the list will be each candidates gamma energy spectrum, branching ratios, half-life, and other information on the feasibility of acquiring the isotope. Another important property to keep track of is the neutron production rate. If the rate is too low, then we will not be able to perform accurate calibrations; however, we also want to avoid too many neutrons from being produced, as this could cause unwanted leakage that could cause issues elsewhere.
-	\par By searching the Table of Isotopes, a list has been developed as seen below in Table 1. The seven isotopes listed are the most likely in terms of their branching ratios, gamma energies, half-lives, and feasibility of being obtained. Most gamma sources do not emit >2 MeV, so finding a source to use with a $^{2}$D target is unlikely outside of $^{226}$Ra. 	
+	\par By searching the Table of Isotopes, a list has been developed as seen above in Table 1. The seven isotopes listed are the most likely in terms of their branching ratios, gamma energies, half-lives, and feasibility of being obtained. Most gamma sources do not emit >2 MeV, so finding a source to use with a $^{2}$D target is unlikely outside of $^{226}$Ra. 	
 		
 	\begin{table}
 		\begin{center}
@@ -161,7 +167,7 @@ aps,
 			$^{88}$Y             & $^{9}$Be            & 0.29                       & 1836                             & 99.2                           \\ \hline
 			$^{226}$Ra($^{214}$Bi)       & $^{2}$D              & 1590                       & 2447                             & 1.57                           \\ \hline
 		\end{tabular}
-		\caption{\label{tab:table-name} Lists of potential gamma radioisotope sources with their corresponding targets, half-lives, relevant gamma energies, and branching ratios gathered from the Table of Isotopes.}
+		\caption{\label{tab:table-name} List of potential gamma radioisotope sources with their corresponding targets, half-lives, relevant gamma energies, and branching ratios gathered from the Table of Isotopes.}
 	\end{center}
 	\end{table}
 		
@@ -174,7 +180,7 @@ aps,
 	\end{array}
 	\end{equation}
 	
-	Here, A is the mass number, $E_{\gamma}$ is the energy of the incident gamma, Q is the threshold energy for the target, and $\delta$ is an energy spread function defined by:
+	\noindent Here, A is the mass number, $E_{\gamma}$ is the energy of the incident gamma, Q is the threshold energy for the target, and $\delta$ is an energy spread function defined by:
 	
 	\begin{equation}
 	\begin{array}{c}
@@ -183,14 +189,14 @@ aps,
 	\end{array}
 	\end{equation}
 	
-	The angle $\theta$ is defined as the angle between the incident gamma and the emitted neutron. As seen in Figure 3, the $\theta$ dependence of $\delta$ can have significant effects, and it is difficult to determine the value of $\theta$, so we will place the gamma source such that the gammas are incident in an isotropic manner, yielding $\delta_{max}$ instead. 
+	\noindent The angle $\theta$ is defined as the angle between the incident gamma and the emitted neutron. As seen in Figure 3, the $\theta$ dependence of $\delta$ can have significant effects, and it is difficult to determine the value of $\theta$, so we will place the gamma source such that the gammas are incident in an isotropic manner, yielding $\delta_{max}$ instead. 
 	
 	\begin{figure}
 		\includegraphics[scale = 0.7, center]{Images/theta_distribution.png}
 		\caption{\label{tab:table-name} Expected neutron energies over a range of incident gamma angles from 0 to 2$\pi$. This is shown for each of our potential sources. Some like $^{214}$Bi have large variability while most only vary by a few keV.}
 	\end{figure}
 	
-	\par A much more involved process is estimating the rate at which neutrons will be emitted from each system. We first start with basic assumptions that will allow for convenience when doing the calculations: we will have 1g of material for both the gamma source and target, and the distance between the source and target will be 1cm. From the half-life of the gamma source, the decay constant, and subsequently, the activity can be calculated:
+	\par Next, we estimate the rate at which neutrons will be emitted from each system. We first start with basic assumptions that will allow for convenience when doing the calculations: we will have 1g of material for both the gamma source and target, and the distance between the source and target will be 1cm. From the half-life of the gamma source, the decay constant, and subsequently, the activity can be calculated:
 	
 	\begin{equation*}
 	t_{1/2} = \frac{ln(2)}{\lambda} \implies \lambda = \frac{ln(2)}{t_{1/2}}
@@ -223,7 +229,7 @@ aps,
 	\#n \approx A * \% Branching * \frac{m_{target}}{m_{target\ nucleus}} * \sigma * \frac{1}{SA_{sphere}}
 	\end{equation}
 	
-	\par Two more calculations were done to determine how much deuterium is found per amount of heavy water since that is the most available form and how large would a sphere of that amount of heavy water be. The first is simply calculated by taking the ratios of the masses, so if we desire 1g of Deuterium as was used for the calculations above, we would need 10g of heavy water. The size of a sphere would then be found by equating the mass to the density times the volume of a sphere. This yields a radius of 1.29 cm, which is on the scale of the size that we would like the system to be at.
+	\par Two more calculations were done to determine how much deuterium is found per amount of heavy water, since that is the most available form, and how large would a sphere of that amount of heavy water be. The first is simply calculated by taking the ratios of the masses, so if we desire 1g of Deuterium as was used for the calculations above, we would need 10g of heavy water. The size of a sphere would then be found by equating the mass to the density times the volume of a sphere. This yields a radius of 1.29 cm, which is on the scale of the size that we would like the system to be at.
 	
 	\subsection{Choosing a Source}
 	\par The availability of our seven potential sources has been determined based on the strength, price, lead time, and supplier. The first isotope to be explored is $^{26}$Al, which looks to be a strong candidate at first; however, it is incredibly difficult and expensive to obtain. Only one supplier, Oak Ridge National Laboratory, is able to provide it at a cost of \$381 per nCi. This is incredibly expensive considering we require amounts on the scale of mCi for a neutron rate large enough. $^{150}$Eu is extremely is rare, making it infeasible to use for a gamma source. Similarly, $^{58}$Co is also expensive and rare, requiring too long of a lead time to acquire.
@@ -279,54 +285,95 @@ aps,
 	\end{aligned}
 	\end{equation}
 	
-	\noindent Here, $\rho = \sqrt{(r^{2} + z^{2})}$, V is the volume of the cylinder in Figure 4b, and the additional mass factor has been included. The updated rates can be seen below in Table 3, and as a sanity check, we can compare our calculated rates with other results. For 1 Ci of $^{88}$Y, the expected value is 10E4 N/s/Ci$^{\cite{1601.03729}}$. For 0.1 mCi, we would expect a rate on the order of 10 n/s, and our calculations yield 25.89 n/s. More importantly, the new estimated neutron rate for $^{207}$Bi is 0.30 n/s.
+	\noindent Here, $\rho = \sqrt{(r^{2} + z^{2})}$, V is the volume of the cylinder in Figure 4b, and the additional mass factor has been included. As a sanity check, we can compare our calculated rates with other results. For 1 Ci of $^{88}$Y, the expected value is 10E4 N/s/Ci$^{\cite{1601.03729}}$. For 0.1 mCi, we would expect a rate on the order of 10 n/s, and our calculations yield 25.89 n/s. For $^{207}$Bi, we now obtain a more accurate neutron emission rate of 0.30 n/s. Having determine a proper gamma source and calculated the expected neutron energy and emission rates, we can now use simulations of our source and chamber to obtain a deeper insight as to how the source will interact and what we can obtain from it.
 
 	\section{Analysis}
-	\subsection{Simulations}
-	\noindent \hl{[maybe this should be in methods too?]}
 	\par GEANT4 is a simulation software that allows for the tracking of particles as they pass through matter, recording properties of each event such as the volume collided with, energies of the particle, scattering types, and more. GEANT4 is highly versatile in its ability to simulate particle events for a wide array of purposes ranging from astroparticle physics to accelerator physics. The software allows for highly detailed and specialized construction of detectors, enabling for high accuracy simulations of many different scenarios.
+	\par The first model of the Drexel Bubble Chamber is simulated using the most simplistic version of the detector. The chamber is contained within a box of air, and the chamber is composed of the acrylic container, mineral oil, quartz jar, and C${3}$F$_{8}$ target. The idea of a particle guide to minimize neutron attenuation when the source is placed outside the mineral oil is also proposed and discussed in a later section. This introduces an additional component to the detector, seen below in Figure 5b. The final version of the chamber includes components from the top of the detector to simulate sources along the z-axis.
 	
-	\begin{figure}[H]
-		\includegraphics[scale = 0.42, center]{Images/histogram_distancetest.png}
-		\caption{\label{tab:table-name} GEANT4 simulations overplotted to show the number of events in the target volume and the average energy of those events. These simulations were at varying distances from the center of the target volume. At 100mm, the source was placed far from the detector; at 58mm, the source was placed right outside the mineral oil; and at 16mm, the source was placed inside the mineral, right up against the C$_{3}$F$_{8}$.}
+	\begin{figure}[!htb]
+		\minipage{0.32\textwidth}
+		\includegraphics[width=\linewidth]{Images/original_design_cropped.png}
+		\endminipage\hfill
+		\minipage{0.32\textwidth}
+		\includegraphics[width=\linewidth]{Images/particle_guide_detector_cropped.png}
+		\endminipage\hfill
+		\minipage{0.32\textwidth}%
+		\includegraphics[width=\linewidth]{Images/new_design.png}
+		\endminipage
+		\caption{\label{tab:table-name} (a) GEANT4 assembly of the relevant Drexel Bubble Chamber volume. The components are colored as: acrylic: cyan, mineral oil: red, quartz: white, C$_{3}$F$_{8}$: yellow. The surrounding volume is composed of air. (b) The pink material is the inclusion of a particle guide to aid in the neutrons traversing the mineral oil. (c) New design with the addition of the heat bath, plastic insulation, and copper heating plate.}
 	\end{figure}
 	
-	\par Our first test with GEANT4 is to gather neutron deposition energies at varying distances. The three potential locations that the neutron source can be placed at are far outside the chamber, up against the mineral oil, or up against the C$_{3}$F$_{8}$. The results of the simulations can be seen above in Figure 5. It is clear that a source placed as close as possible results in the greatest number of hits and the highest average energy upon recoil. The differences in the results between distances is inflated by the mineral oil. Mineral oil is a strong shield against neutrons, greatly reducing both the energies and counts of neutrons that reach the target volume.
+	\subsection{Emission Type}
+	\begin{figure}[!b]
+		\includegraphics[scale = 0.6, center]{Images/emission_normalized.png}
+		\caption{\label{tab:table-name} GEANT4 simulation of a neutron source placed 60mm away from the detector. As expected, linear emission performs best, follow by arc and isotropic emissions.}
+	\end{figure}
+	\par As seen below in Figure 6, the first thing to consider with our source is how it will emit particles. The ideal situation would be to focus the neutrons to be emitted linearly towards our target volume. Other considered emission types are an arc covering the surface area of the detector and isotropic emission. A linear beam will produce an average energy almost three times stronger than isotropic source, leading to a bubble rate nearly six times larger. In order to focus the neutrons to an arc or linear beam, you would need a material capable of reflecting neutrons without significantly decreasing their energy. There is also no guarantee that the neutrons will be reflected outwards instead of continually scattering inside the shielding. In addition, the source will take up much more volume due to this additional material, making it much less flexible and inconvenient. As a result, we can conclude that it is best to leave the source as an isotropic emitter despite the fact that it is much weaker.
+
+	\begin{figure}[!b]
+		\includegraphics[scale = 0.6, center]{Images/distance_normalized.png}
+		\caption{\label{tab:table-name} GEANT4 simulations overplotted to show the number of events in the target volume and the average energy of those events. At 100mm, the source was placed far from the detector; at 58mm, the source was placed right outside the mineral oil; and at 16mm, the source was placed inside the mineral, right up against the C$_{3}$F$_{8}$.}
+	\end{figure}
 	
-	\noindent \hl{[Probably replace these histograms with better simulation plots]} \\
-	\hl{[Need to fix scaling issues]}
+	\subsection{Distance From Detector}
+	\par Next, we test for expected rates at varying distances from the chamber: 100mm, 60mm, and 18mm. These three key locations that the neutron source can be placed at correspond to: far away from the chamber, up against the acrylic, or up against the C$_{3}$F$_{8}$. The results of the simulations can be seen below in Figure 7. Mineral oil strongly attenuates neutrons, greatly reducing both the energies and counts of neutrons that reach the target volume. Hydrogen and other low atomic number elements have high scattering cross sections with neutrons, reducing the likelihood of a neutron passing through unobstructed. Since the mineral oil contains a significant enough composition of Hydrogen, any amount will greatly impact the number of events we expect to see. The source should then be ideally placed within the mineral oil, as close to the quartz jar as possible to minimize the volume of mineral oil that each neutron will have to traverse before detection.
 	
-	\begin{figure}[H]
-		\includegraphics[scale = 0.45, center]{Images/histogram_particle_guide.png}
+	\begin{figure}[!b]
+		\includegraphics[scale = 0.6, center]{Images/particle_guide_normalized.png}
 		\caption{\label{tab:table-name} GEANT4 simulations overplotted to show the number of events in the target volume and the average energy of those events. These simulations were run with a particle guide made of air, lead, and copper introduced inside the mineral oil volume.}
 	\end{figure}
-
-	\par Our second test is to determine whether placing a particle guide inside the mineral oil to allow for a clearer path for the neutrons to traverse towards the C$_{3}$F$_{8}$. Inserting and removing the source from the mineral is a tedious task with a small chamber like the DBC, so it will be exponentially more difficult for the large chambers. We test with three different materials of air, copper, and lead. Looking at Figure 6, we see, as expected, that air performs the best at allowing neutrons to travel through it. Even in the best case scenario, a particle guide performs significantly worse than placing the source inside the mineral oil.
-
-	\par In order to ensure that our simulations are correct, we simulate a $^{244}$Cm source and compare with data obtained from the DBC. From the data collected, the source should emit neutrons at approximately 1.8 n/s, and we should see a bubble rate peaking at 100 bubbles/hr for a 2 keV threshold.
 	
-	\noindent \hl{[write more once the cm244 simulations are fixed, also replace the plots too]}
+	\subsection{Particle Guide}
+	\par Inserting and removing the source from the mineral is a tedious task with a small chamber like the DBC, so it will be exponentially more difficult for the large chambers. An easier method might be to place a particle guide inside the mineral oil that will allow the neutrons to safely traverse through to the C$_{3}$F$_{8}$ volume. We test with three different materials of air for its low density, copper, and lead, both for their high atomic numbers. The idea here is to displace the mineral oil volume with a higher atomic number or lower density material such that the emitted neutrons would not be attenuated. Looking at Figure 8, we see, as expected, that air performs the best at allowing neutrons to travel through it, follow by lead and then copper. Even in the best case scenario, a particle guide performs significantly worse than placing the source inside the mineral oil.
 
-	\begin{figure}[H]%
-		\centering
-		\subfloat[]{{\includegraphics[scale = 0.15]{Images/histogram_cm244.png} }}%
-		\qquad
-		\subfloat[]{{\includegraphics[scale = 0.15]{Images/energy_spectrum.png} }}%
-		\caption{\label{tab:table-name} (a) Neutron energy counts when interacting with the target volume. Neutrons are emitted from $^{244}$Cm source directly above the chamber. (b) Emission energy spectrum of $^{244}$Cm from GEANT4.}%
+	\pagebreak
+	\begin{figure}[!t]
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.02\linewidth]{Images/cm244_normalized_cropped.png}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.02\linewidth]{Images/cm244_spectrum_cropped.png}
+		\end{minipage}
+		\caption{\label{tab:table-name} (a) Neutron energy counts when interacting with the target volume. (b) Emission energy spectrum of $^{244}$Cm from GEANT4.}%
 	\end{figure}
 
-	\subsection{Results}
-	\hl{[fill this in once actual data is collected]}
+	\subsection{$^{244}$Cm Source}
+	\par We would like to have some indication that the simulations reflect reality before blindly trusting them as indicating any useful results. Experimental data has been previously obtained for a $^{244}$Cm source placed directly above the chamber. This source primarily undergoes $\alpha$ decay with a small branching ratio for spontaneous fission. Since this source placed on top of the chamber, it is necessary to include the top components, as mentioned in the discussion on detector construction. From this data, a result of approximately 108 bubbles per hour was obtained. The current activity of the source has been calculated to be 4.64 neutrons/sec.
+	\par Using the calculate neutron emission rate, we can simulate the $^{244}$Cm source with our chamber and attempt to see if the results match. As seen above in Figure 9b, the emission spectrum of the source is properly replicated; however, the bubble rate shown in Figure 9a is significantly less than our experimental value. This can potentially be explained by ($\alpha$, n) reactions in the chamber components due to $^{244}$Cm undergoing $\alpha$ decay a significant portion of the time. The physics that is being used with the simulation is not capable of detecting an ($\alpha$, n) reaction, and as a result, the simulation will miss any neutrons produced through that process.
 	
+	\subsection{Bubble Rates}
+	\begin{figure}[!b]
+		\includegraphics[scale = 0.8, center]{Images/bubble_mult_no_caps.png}
+		\caption{\label{tab:table-name} Expected average bubble multiplicities for a range of threshold energies.}
+	\end{figure}
+
+	\par Neutrons within the chamber are usually detected through their bubble multiplicity. With a neutron source, we would then expect see multiple bubbles per event. By running 100 simulations each with 100,000 events, we simulate our source over a range of threshold energies. Figure 10 shows the the average bubble multiplicity for each energy threshold from the simulations. As a result of the low neutron energies, we should expect to see bubble multiplicity very close to 1. As the threshold increases, the likelihood that a bubble is nucleated decreases, meaning that the bubble multiplicity should also decrease. The average bubble multiplicity can then be used to normalize calculations to a per-event basis rather than counting all bubbles. The 60mm data also shows that there is high error in the results compared to 18mm, so placing the source at 60mm will make it difficult to match experimental results with simulated results.
+	
+	\begin{figure}[t]
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.1\linewidth]{Images/18mm_final_no_caps.png}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.1\linewidth]{Images/60mm_final_no_caps.png}
+		\end{minipage}
+		\caption{\label{tab:table-name} Expected bubble rates as a function of threshold energy at both 60mm and 18mm away from the chamber center. The rates for the neutrons are also broken down in to rates for bubble multiplicities, whose sum is equal to the total neutron rate.}
+	\end{figure}
+	
+	\par A key result from the simulations is the expected bubble rate at a given threshold energy. This not only will give us an idea of how many events we should expect for a given threshold, but it will also be able to give us an idea of what threshold is being operated at if we know the event rate. We expect the bubble rates to decrease as the threshold energy for nucleation is increased due to less neutrons with sufficient energy coming in contact with the target volume. This effect is observed above in Figure 11 for gammas and neutrons emitted at 18mm and 60mm. It is also important to note that around ~2 keV, the gammas emitted from the $^{207}$Bi source will dominate the neutrons emitted, making it impossible to differentiate between the two events at lower thresholds when gammas become relevant.
+	\par Figure 11 also breaks down the composition of the neutron bubbles rates by bubble multiplicity. As expected, lower bubble multiplicities have higher rates than higher multiplicities, with single bubble multiplicities dominating. For a source placed 60mm away, the error bars show that we would have difficulty differentiating between nearby threshold energies due to significant overlap. This effect is minimized when placed 18mm away due to the large increase in the number of events greater than the threshold energies. The primary goal of the calibrations is to be able to differentiate WIMP events in the low keV range from other particles such as gammas, so if we can decrease the threshold at which gammas dominate, then finding a WIMP event becomes more likely.
+
 	\section{Conclusion}
-	\hl{[fill this in once data collection finished]}
-	
-	\subsection{Future Plans}
-	\hl{[fill this in once at end of spring term]}
+	\par We have shown that it is possible to construct a neutron source capable of emitting monoenergetic neutrons in the sub-100 keV energy range. An initial list of seven potential isotopes was filtered down to $^{207}$Bi by analyzing the half-lives, branching ratios, expected neutron energies, and expected neutron emission rates. These values were then used in simulating the source and the Drexel Bubble Chamber using GEANT4. We analyzed this source over a variety of different scenarios including emission types, location, chamber composition. From these simulations, we have concluded that placing the source inside the mineral oil will obtain the highest event rates and the most consistent energies. The simulations also show that we should expect the source to be useful until ~2 keV, at which point the gammas emitted from the $^{207}$Bi source will become a significant event trigger. Several results from the simulations follow expected trends, indicating that the conclusions drawn from them have a valid foundation.
+	\par Future plans for the experiment consist of purchasing the gamma source and target to construct the neutron source. Once the source is complete, data taking will begin to compare experimental results with the results from the calculations and simulations done here. The simulation setup and analysis code designed here will form the foundation for future simulations done on the Drexel Bubble Chamber for other sources and scenarios. We can obtain more in depth information as the complexity of the simulations and analysis is built upon by future work. If successful, the source will prove extremely useful for calibrating other chambers. Further success will have the source adapted for use on the primary detector located at Snolab. With the improved calibrations, more stringent limits can be set on the WIMP-nucleon cross section and potentially push us one step closer to detecting dark matter.
 	
 	\pagebreak
 	\phantomsection
-	\noindent \hl{[make sure everything in references is properly cited]}
+	\small
 	\begin{thebibliography}{1}
 		\addcontentsline{toc}{section}{References}
 		\bibitem{1807.06209} N. Aghanim et al. (Planck Collaboration). 2018. Planck 2018 results. VI. Cosmological parameters. arXiv:1807.06209 
@@ -344,34 +391,39 @@ aps,
 		\bibitem{chen} Chen, J., \& Savage, M. J. (1999). np$\rightarrow$d$\gamma$ for big-bang nucleosynthesis. Physical Review C, 60(6) doi:10.1103/PhysRevC.60.065205
 		
 	\end{thebibliography}
-	\section*{Appendix A: GEANT4 Detector Construction}
-	\addcontentsline{toc}{section}{Appendix A: GEANT4 Detector Construction}
-	\noindent \hl{[maybe move this text to simulations section]}
-	\par The current model of the Drexel Bubble Chamber is simulated using a simplistic version of the detector. Within GEANT, the world is composed of volume of air surrounding the detector, which has four components. The outer most layer is a cylindrical container of acrylic, and the next layer within is a similarly shaped object used for the mineral oil. The next object located within the mineral oil is the quartz container for the inner most volume, the C$_{3}$F$_{8}$. The C$_{3}$F$_{8}$ volume is set as the sensitive detector so that when neutrons scatter off the volume, GEANT will record the data. \\
-	\hl{[might not need all these images]} \\
-	\hl{[fix the color issues and reformat the layout]}
-	\begin{figure}[H]%
-		\centering
-		\subfloat[]{{\includegraphics[scale = 0.2]{Images/dbc_geant.png} }}%
-		\qquad
-		\subfloat[]{{\includegraphics[scale = 0.2]{Images/particle_guide.png} }}%
-		\qquad
-		\subfloat[]{{\includegraphics[scale = 0.2]{Images/new_design.png} }}%
-		\caption{\label{tab:table-name} (a) GEANT4 assembly of the relevant Drexel Bubble Chamber volume. The components are colored as: acrylic: cyan, mineral oil: red, quartz: white, C$_{3}$F$_{8}$: yellow. The yellow outer lines define the world of the system, which is given air as a material. (b) The brown material is the inclusion of a particle guide to aid in the neutrons traversing the mineral oil. (c) New design with top pieces constructed.}%
-	\end{figure}
+	\normalsize
+%	\section*{Appendix A: GEANT4 Visualizations}
+%	\addcontentsline{toc}{section}{Appendix A: GEANT4 Visualizations}
+%
+%	\begin{figure}[!htb]
+%		\minipage{0.32\textwidth}
+%		\includegraphics[width=\linewidth]{Images/16mm_source.png}
+%		\endminipage\hfill
+%		\minipage{0.32\textwidth}
+%		\includegraphics[width=\linewidth]{Images/58mm_source.png}
+%		\endminipage\hfill
+%		\minipage{0.32\textwidth}%
+%		\includegraphics[width=\linewidth]{Images/100mm_source.png}
+%		\endminipage
+%		\caption{\label{tab:table-name} (a) Neutron source located at 16mm away, inside the mineral oil. (b) Neutron source located 58mm away right outside the mineral oil. (c) Neutron source located far away from the chamber.}%
+%	\end{figure}
+%
+%	\begin{figure}[!htb]
+%		\minipage{0.32\textwidth}
+%		\includegraphics[width=\linewidth]{Images/iso_top_view.png}
+%		\endminipage\hfill
+%		\minipage{0.32\textwidth}
+%		\includegraphics[width=\linewidth]{Images/arc_top_view.png}
+%		\endminipage\hfill
+%		\minipage{0.32\textwidth}%
+%		\includegraphics[width=\linewidth]{Images/linear_top_view.png}
+%		\endminipage
+%		\caption{\label{tab:table-name} (a) Neutron source with isotropic emission. (b) Emission through an arc aimed to cover the entire front surface area of the detector. (c) A linear beam of neutrons focused directly on the target volume.}%
+%	\end{figure}
 
-	\begin{figure}[H]%
-		\centering
-		\subfloat[]{{\includegraphics[scale = 0.24]{Images/16mm.png} }}%
-		\qquad
-		\subfloat[]{{\includegraphics[scale = 0.24]{Images/58mm.png} }}%
-		\qquad
-		\subfloat[]{{\includegraphics[scale = 0.24]{Images/100mm.png} }}%
-		\caption{\label{tab:table-name} \hl{[replace this with single image showing each location]} (a) Neutron source located at 16mm away, inside the mineral oil. (b) Neutron source located 58mm away right outside the mineral oil. (c) Neutron source located far away from the chamber.}%
-	\end{figure}
-
-	\section*{Appendix B: $\gamma$-neutron Cross Section Plots}
-	\addcontentsline{toc}{section}{Appendix B: $\gamma$-neutron Cross Section Plots}
+	\phantomsection
+	\section*{Appendix A: $\gamma$-neutron Cross Section Plots}
+	\addcontentsline{toc}{section}{Appendix A: $\gamma$-neutron Cross Section Plots}
 	
 	\begin{figure}[H]
 		\includegraphics[scale = 2.5, center]{Images/be_plot.png}
@@ -382,7 +434,5 @@ aps,
 		\includegraphics[scale = 1.8, center]{Images/deuterium_cross_section.png}
 		\caption{\label{tab:table-name} Cross sections for gamma-neutron interactions with a Deuterium target as a function of incident gamma energies. The energy for $^{226}$Ra is highlighted$^{\cite{chen}}$.}
 	\end{figure}
-
-	\makebox[12cm][c]{Advisor Signature: \makebox[5cm][c] {\hrulefill} \hfill}
 
 \end{document}
