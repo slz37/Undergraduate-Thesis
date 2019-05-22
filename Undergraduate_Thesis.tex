@@ -192,7 +192,7 @@ aps,
 	\noindent The angle $\theta$ is defined as the angle between the incident gamma and the emitted neutron. As seen in Figure 3, the $\theta$ dependence of $\delta$ can have significant effects, and it is difficult to determine the value of $\theta$, so we will place the gamma source such that the gammas are incident in an isotropic manner, yielding $\delta_{max}$ instead. 
 	
 	\begin{figure}
-		\includegraphics[scale = 0.7, center]{Images/theta_distribution.png}
+		\includegraphics[scale = 0.7, center]{Images/neutron_energy_distribution.png}
 		\caption{\label{tab:table-name} Expected neutron energies over a range of incident gamma angles from 0 to 2$\pi$. This is shown for each of our potential sources. Some like $^{214}$Bi have large variability while most only vary by a few keV.}
 	\end{figure}
 	
@@ -306,13 +306,13 @@ aps,
 	
 	\subsection{Emission Type}
 	\begin{figure}[!b]
-		\includegraphics[scale = 0.6, center]{Images/emission_normalized.png}
+		\includegraphics[scale = 0.6, center]{Images/emission.png}
 		\caption{\label{tab:table-name} GEANT4 simulation of a neutron source placed 60mm away from the detector. As expected, linear emission performs best, follow by arc and isotropic emissions.}
 	\end{figure}
 	\par As seen below in Figure 6, the first thing to consider with our source is how it will emit particles. The ideal situation would be to focus the neutrons to be emitted linearly towards our target volume. Other considered emission types are an arc covering the surface area of the detector and isotropic emission. A linear beam will produce an average energy almost three times stronger than isotropic source, leading to a bubble rate nearly six times larger. In order to focus the neutrons to an arc or linear beam, you would need a material capable of reflecting neutrons without significantly decreasing their energy. There is also no guarantee that the neutrons will be reflected outwards instead of continually scattering inside the shielding. In addition, the source will take up much more volume due to this additional material, making it much less flexible and inconvenient. As a result, we can conclude that it is best to leave the source as an isotropic emitter despite the fact that it is much weaker.
 
 	\begin{figure}[!b]
-		\includegraphics[scale = 0.6, center]{Images/distance_normalized.png}
+		\includegraphics[scale = 0.6, center]{Images/distance.png}
 		\caption{\label{tab:table-name} GEANT4 simulations overplotted to show the number of events in the target volume and the average energy of those events. At 100mm, the source was placed far from the detector; at 58mm, the source was placed right outside the mineral oil; and at 16mm, the source was placed inside the mineral, right up against the C$_{3}$F$_{8}$.}
 	\end{figure}
 	
@@ -320,7 +320,7 @@ aps,
 	\par Next, we test for expected rates at varying distances from the chamber: 100mm, 60mm, and 18mm. These three key locations that the neutron source can be placed at correspond to: far away from the chamber, up against the acrylic, or up against the C$_{3}$F$_{8}$. The results of the simulations can be seen below in Figure 7. Mineral oil strongly attenuates neutrons, greatly reducing both the energies and counts of neutrons that reach the target volume. Hydrogen and other low atomic number elements have high scattering cross sections with neutrons, reducing the likelihood of a neutron passing through unobstructed. Since the mineral oil contains a significant enough composition of Hydrogen, any amount will greatly impact the number of events we expect to see. The source should then be ideally placed within the mineral oil, as close to the quartz jar as possible to minimize the volume of mineral oil that each neutron will have to traverse before detection.
 	
 	\begin{figure}[!b]
-		\includegraphics[scale = 0.6, center]{Images/particle_guide_normalized.png}
+		\includegraphics[scale = 0.6, center]{Images/particle_guide.png}
 		\caption{\label{tab:table-name} GEANT4 simulations overplotted to show the number of events in the target volume and the average energy of those events. These simulations were run with a particle guide made of air, lead, and copper introduced inside the mineral oil volume.}
 	\end{figure}
 	
@@ -331,11 +331,11 @@ aps,
 	\begin{figure}[!t]
 		\begin{minipage}{0.5\textwidth}
 			\centering
-			\includegraphics[width=1.02\linewidth]{Images/cm244_normalized_cropped.png}
+			\includegraphics[width=1.02\linewidth]{Images/cm244.png}
 		\end{minipage}
 		\begin{minipage}{0.5\textwidth}
 			\centering
-			\includegraphics[width=1.02\linewidth]{Images/cm244_spectrum_cropped.png}
+			\includegraphics[width=1.02\linewidth]{Images/cm244_spectrum.png}
 		\end{minipage}
 		\caption{\label{tab:table-name} (a) Neutron energy counts when interacting with the target volume. (b) Emission energy spectrum of $^{244}$Cm from GEANT4.}%
 	\end{figure}
@@ -345,9 +345,21 @@ aps,
 	\par Using the calculate neutron emission rate, we can simulate the $^{244}$Cm source with our chamber and attempt to see if the results match. As seen above in Figure 9b, the emission spectrum of the source is properly replicated; however, the bubble rate shown in Figure 9a is significantly less than our experimental value. This can potentially be explained by ($\alpha$, n) reactions in the chamber components due to $^{244}$Cm undergoing $\alpha$ decay a significant portion of the time. The physics that is being used with the simulation is not capable of detecting an ($\alpha$, n) reaction, and as a result, the simulation will miss any neutrons produced through that process.
 	
 	\subsection{Bubble Rates}
+%	\begin{figure}[!b]
+%		\includegraphics[scale = 0.8, center]{Images/bubble_mult.png}
+%		\caption{\label{tab:table-name} Expected average bubble multiplicities for a range of threshold energies.}
+	%\end{figure}
+
 	\begin{figure}[!b]
-		\includegraphics[scale = 0.8, center]{Images/bubble_mult_no_caps.png}
-		\caption{\label{tab:table-name} Expected average bubble multiplicities for a range of threshold energies.}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.1\linewidth]{Images/bubble_mult.png}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1.1\linewidth]{Images/large_chamber_bubble_mult.png}
+		\end{minipage}
+		\caption{\label{tab:table-name} Expected average bubble multiplicities for a range of threshold energies. (a) Source placed 18mm and 60mm from the DBC chamber. (b) DBC chamber scaled to large chambers with source placed within mineral oil.}
 	\end{figure}
 
 	\par Neutrons within the chamber are usually detected through their bubble multiplicity. With a neutron source, we would then expect see multiple bubbles per event. By running 100 simulations each with 100,000 events, we simulate our source over a range of threshold energies. Figure 10 shows the the average bubble multiplicity for each energy threshold from the simulations. As a result of the low neutron energies, we should expect to see bubble multiplicity very close to 1. As the threshold increases, the likelihood that a bubble is nucleated decreases, meaning that the bubble multiplicity should also decrease. The average bubble multiplicity can then be used to normalize calculations to a per-event basis rather than counting all bubbles. The 60mm data also shows that there is high error in the results compared to 18mm, so placing the source at 60mm will make it difficult to match experimental results with simulated results.
@@ -355,11 +367,11 @@ aps,
 	\begin{figure}[t]
 		\begin{minipage}{0.5\textwidth}
 			\centering
-			\includegraphics[width=1.1\linewidth]{Images/18mm_final_no_caps.png}
+			\includegraphics[width=1.1\linewidth]{Images/18mm_thresh.png}
 		\end{minipage}
 		\begin{minipage}{0.5\textwidth}
 			\centering
-			\includegraphics[width=1.1\linewidth]{Images/60mm_final_no_caps.png}
+			\includegraphics[width=1.1\linewidth]{Images/60mm_thresh.png}
 		\end{minipage}
 		\caption{\label{tab:table-name} Expected bubble rates as a function of threshold energy at both 60mm and 18mm away from the chamber center. The rates for the neutrons are also broken down in to rates for bubble multiplicities, whose sum is equal to the total neutron rate.}
 	\end{figure}
