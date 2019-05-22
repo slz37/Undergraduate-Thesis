@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.7)  21 MAY 2019 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.7)  21 MAY 2019 23:54
 entering extended mode
 **./Undergraduate_Thesis.tex
 (Undergraduate_Thesis.tex
@@ -1368,7 +1368,7 @@ LaTeX Info: Redefining \nameref on input line 71.
 \@outlinefile=\write4
 \openout4 = `Undergraduate_Thesis.out'.
 
-<Images/logo.png, id=75, 75.8835pt x 78.5334pt>
+<Images/logo.png, id=79, 75.8835pt x 78.5334pt>
 File: Images/logo.png Graphic file (type png)
 <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png  used on input line 88.
@@ -1389,18 +1389,18 @@ o.png>]
 \openout5 = `Undergraduate_Thesis.toc'.
 
  [2] [3]
-<Images/constraints.png, id=130, 775.89874pt x 608.2725pt>
+<Images/constraints.png, id=135, 775.89874pt x 608.2725pt>
 File: Images/constraints.png Graphic file (type png)
 <use Images/constraints.png>
 Package pdftex.def Info: Images/constraints.png  used on input line 113.
 (pdftex.def)             Requested size: 310.354pt x 243.30469pt.
  [4 <./Images/constraints.png>]
-<Images/pico60.png, id=144, 310.15875pt x 412.54124pt>
+<Images/pico60.png, id=149, 310.15875pt x 412.54124pt>
 File: Images/pico60.png Graphic file (type png)
 <use Images/pico60.png>
 Package pdftex.def Info: Images/pico60.png  used on input line 123.
 (pdftex.def)             Requested size: 170.58783pt x 226.89838pt.
-<Images/dbctext.png, id=145, 452.69125pt x 432.61626pt>
+<Images/dbctext.png, id=150, 452.69125pt x 432.61626pt>
 File: Images/dbctext.png Graphic file (type png)
 <use Images/dbctext.png>
 Package pdftex.def Info: Images/dbctext.png  used on input line 125.
@@ -1437,180 +1437,174 @@ LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <4.2> not available
 (Font)              size <5> substituted on input line 187.
 
 [8]
-<Images/neutron_energy_distribution.png, id=187, 867.24pt x 433.62pt>
+<Images/neutron_energy_distribution.png, id=192, 867.24pt x 433.62pt>
 File: Images/neutron_energy_distribution.png Graphic file (type png)
 <use Images/neutron_energy_distribution.png>
 Package pdftex.def Info: Images/neutron_energy_distribution.png  used on input 
 line 195.
 (pdftex.def)             Requested size: 607.06387pt x 303.53192pt.
  [9 <./Images/neutron_energy_distribution.png>] [10] [11] [12]
-<Images/original_design_cropped.png, id=213, 263.48438pt x 338.01282pt>
+<Images/original_design_cropped.png, id=218, 263.48438pt x 338.01282pt>
 File: Images/original_design_cropped.png Graphic file (type png)
 <use Images/original_design_cropped.png>
 Package pdftex.def Info: Images/original_design_cropped.png  used on input line
- 296.
+ 295.
 (pdftex.def)             Requested size: 150.32504pt x 192.85497pt.
-<Images/particle_guide_detector_cropped.png, id=214, 435.12563pt x 491.58656pt>
+<Images/particle_guide_detector_cropped.png, id=219, 435.12563pt x 491.58656pt>
 
 File: Images/particle_guide_detector_cropped.png Graphic file (type png)
 <use Images/particle_guide_detector_cropped.png>
 Package pdftex.def Info: Images/particle_guide_detector_cropped.png  used on in
-put line 299.
+put line 298.
 (pdftex.def)             Requested size: 150.32504pt x 169.83008pt.
-<Images/new_design.png, id=215, 761.84625pt x 435.12563pt>
+<Images/new_design.png, id=220, 761.84625pt x 435.12563pt>
 File: Images/new_design.png Graphic file (type png)
 <use Images/new_design.png>
-Package pdftex.def Info: Images/new_design.png  used on input line 302.
+Package pdftex.def Info: Images/new_design.png  used on input line 301.
 (pdftex.def)             Requested size: 150.32504pt x 85.85503pt.
  [13 <./Images/original_design_cropped.png> <./Images/particle_guide_detector_c
 ropped.png> <./Images/new_design.png>]
-<Images/emission.png, id=222, 556.479pt x 346.896pt>
+<Images/emission.png, id=227, 556.479pt x 346.896pt>
 File: Images/emission.png Graphic file (type png)
 <use Images/emission.png>
-Package pdftex.def Info: Images/emission.png  used on input line 309.
+Package pdftex.def Info: Images/emission.png  used on input line 308.
 (pdftex.def)             Requested size: 333.88997pt x 208.13919pt.
-<Images/distance.png, id=223, 617.9085pt x 389.5353pt>
+<Images/distance.png, id=228, 617.9085pt x 389.5353pt>
 File: Images/distance.png Graphic file (type png)
 <use Images/distance.png>
-Package pdftex.def Info: Images/distance.png  used on input line 315.
+Package pdftex.def Info: Images/distance.png  used on input line 314.
 (pdftex.def)             Requested size: 370.74796pt x 233.72298pt.
  [14 <./Images/emission.png>]
-<Images/particle_guide.png, id=230, 555.0336pt x 378.6948pt>
+<Images/particle_guide.png, id=235, 555.0336pt x 378.6948pt>
 File: Images/particle_guide.png Graphic file (type png)
 <use Images/particle_guide.png>
-Package pdftex.def Info: Images/particle_guide.png  used on input line 323.
+Package pdftex.def Info: Images/particle_guide.png  used on input line 322.
 (pdftex.def)             Requested size: 333.02272pt x 227.21863pt.
  [15 <./Images/distance.png>] [16 <./Images/particle_guide.png>]
-<Images/cm244.png, id=243, 462.528pt x 346.896pt>
+<Images/cm244.png, id=248, 462.528pt x 346.896pt>
 File: Images/cm244.png Graphic file (type png)
 <use Images/cm244.png>
-Package pdftex.def Info: Images/cm244.png  used on input line 334.
+Package pdftex.def Info: Images/cm244.png  used on input line 333.
 (pdftex.def)             Requested size: 239.57605pt x 179.68295pt.
 
-Overfull \hbox (4.69855pt too wide) in paragraph at lines 334--335
+Overfull \hbox (4.69855pt too wide) in paragraph at lines 333--334
  [][] 
  []
 
-<Images/cm244_spectrum.png, id=244, 462.528pt x 346.896pt>
+<Images/cm244_spectrum.png, id=249, 462.528pt x 346.896pt>
 File: Images/cm244_spectrum.png Graphic file (type png)
 <use Images/cm244_spectrum.png>
-Package pdftex.def Info: Images/cm244_spectrum.png  used on input line 338.
+Package pdftex.def Info: Images/cm244_spectrum.png  used on input line 337.
 (pdftex.def)             Requested size: 239.57605pt x 179.68295pt.
 
-Overfull \hbox (4.69855pt too wide) in paragraph at lines 338--339
+Overfull \hbox (4.69855pt too wide) in paragraph at lines 337--338
  [][] 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 332--340
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 331--339
 []$[]$ $[]$ 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 343.
+(hyperref)                removing `math shift' on input line 342.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 343.
+(hyperref)                removing `superscript' on input line 342.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 343.
+(hyperref)                removing `math shift' on input line 342.
 
 [17 <./Images/cm244.png> <./Images/cm244_spectrum.png>]
-<Images/bubble_mult.png, id=253, 462.528pt x 346.896pt>
+<Images/bubble_mult.png, id=258, 462.528pt x 346.896pt>
 File: Images/bubble_mult.png Graphic file (type png)
 <use Images/bubble_mult.png>
-Package pdftex.def Info: Images/bubble_mult.png  used on input line 356.
+Package pdftex.def Info: Images/bubble_mult.png  used on input line 355.
 (pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
 
-Overfull \hbox (23.48918pt too wide) in paragraph at lines 356--357
+Overfull \hbox (23.48918pt too wide) in paragraph at lines 355--356
  [][] 
  []
 
-<Images/large_chamber_bubble_mult.png, id=254, 462.528pt x 346.896pt>
+<Images/large_chamber_bubble_mult.png, id=259, 462.528pt x 346.896pt>
 File: Images/large_chamber_bubble_mult.png Graphic file (type png)
 <use Images/large_chamber_bubble_mult.png>
 Package pdftex.def Info: Images/large_chamber_bubble_mult.png  used on input li
-ne 360.
+ne 359.
 (pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
 
-Overfull \hbox (23.48918pt too wide) in paragraph at lines 360--361
+Overfull \hbox (23.48918pt too wide) in paragraph at lines 359--360
  [][] 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 354--362
-[]$[]$ $[]$ 
- []
-
-<Images/18mm_thresh.png, id=255, 462.528pt x 346.896pt>
-File: Images/18mm_thresh.png Graphic file (type png)
-<use Images/18mm_thresh.png>
-Package pdftex.def Info: Images/18mm_thresh.png  used on input line 370.
-(pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
-
-Overfull \hbox (23.48918pt too wide) in paragraph at lines 370--371
- [][] 
- []
-
-<Images/60mm_thresh.png, id=256, 462.528pt x 346.896pt>
-File: Images/60mm_thresh.png Graphic file (type png)
-<use Images/60mm_thresh.png>
-Package pdftex.def Info: Images/60mm_thresh.png  used on input line 374.
-(pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
-
-Overfull \hbox (23.48918pt too wide) in paragraph at lines 374--375
- [][] 
- []
-
-
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 368--376
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 353--361
 []$[]$ $[]$ 
  []
 
 [18 <./Images/bubble_mult.png> <./Images/large_chamber_bubble_mult.png>]
+<Images/18mm_thresh.png, id=267, 462.528pt x 346.896pt>
+File: Images/18mm_thresh.png Graphic file (type png)
+<use Images/18mm_thresh.png>
+Package pdftex.def Info: Images/18mm_thresh.png  used on input line 369.
+(pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
+
+Overfull \hbox (23.48918pt too wide) in paragraph at lines 369--370
+ [][] 
+ []
+
+<Images/60mm_thresh.png, id=268, 462.528pt x 346.896pt>
+File: Images/60mm_thresh.png Graphic file (type png)
+<use Images/60mm_thresh.png>
+Package pdftex.def Info: Images/60mm_thresh.png  used on input line 373.
+(pdftex.def)             Requested size: 258.36668pt x 193.78404pt.
+
+Overfull \hbox (23.48918pt too wide) in paragraph at lines 373--374
+ [][] 
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 367--375
+[]$[]$ $[]$ 
+ []
+
 [19 <./Images/18mm_thresh.png> <./Images/60mm_thresh.png>] [20] [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 438.
+(hyperref)                removing `math shift' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 438.
+(hyperref)                removing `\gamma' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 438.
+(hyperref)                removing `math shift' on input line 437.
 
-<Images/be_plot.png, id=285, 218.0145pt x 105.7551pt>
+<Images/be_plot.png, id=289, 218.0145pt x 105.7551pt>
 File: Images/be_plot.png Graphic file (type png)
 <use Images/be_plot.png>
-Package pdftex.def Info: Images/be_plot.png  used on input line 441.
+Package pdftex.def Info: Images/be_plot.png  used on input line 440.
 (pdftex.def)             Requested size: 545.03487pt x 264.38708pt.
-<Images/deuterium_cross_section.png, id=288, 217.7736pt x 105.7551pt>
+<Images/deuterium_cross_section.png, id=292, 217.7736pt x 105.7551pt>
 File: Images/deuterium_cross_section.png Graphic file (type png)
 <use Images/deuterium_cross_section.png>
 Package pdftex.def Info: Images/deuterium_cross_section.png  used on input line
- 446.
+ 445.
 (pdftex.def)             Requested size: 391.99216pt x 190.35902pt.
 [22 <./Images/be_plot.png> <./Images/deuterium_cross_section.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
 
 (Undergraduate_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 450.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
+Package rerunfilecheck Info: File `Undergraduate_Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 217022249B42D8DDF151ACF27B098F72;1121.
 
-
-Package rerunfilecheck Warning: File `Undergraduate_Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Undergraduate_Thesis.out':
-(rerunfilecheck)             Before: 8E91D06623C75836BE7B11C7E46D8B87;1058
-(rerunfilecheck)             After:  217022249B42D8DDF151ACF27B098F72;1121.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
@@ -1618,16 +1612,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
  ) 
 Here is how much of TeX's memory you used:
- 33873 strings out of 492946
- 653418 string characters out of 3135632
+ 33874 strings out of 492946
+ 653434 string characters out of 3135632
  721674 words of memory out of 3000000
- 37040 multiletter control sequences out of 15000+200000
+ 37041 multiletter control sequences out of 15000+200000
  563642 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,17n,87p,1371b,808s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,17n,87p,1459b,808s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Luke\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
 crm0800.pk> <C:\Users\Luke\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecbx0800.pk> <C:\Users\Luke\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
@@ -1651,9 +1645,9 @@ e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb>
-Output written on Undergraduate_Thesis.pdf (22 pages, 908371 bytes).
+Output written on Undergraduate_Thesis.pdf (22 pages, 909376 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
+ 779 PDF objects out of 1000 (max. 8388607)
  77 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 272 words of extra memory for PDF output out of 10000 (max. 10000000)
 

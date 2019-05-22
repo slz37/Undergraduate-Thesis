@@ -15,7 +15,7 @@ from file_operations import *
 
 COLUMNS = ["event_id",
            "energy"]
-plt.figure(figsize = (20, 10))
+plt.figure()#figsize = (20, 10))
 
 def open_file(filename):
   '''
@@ -51,10 +51,10 @@ if __name__ == "__main__":
 
   data = open_file(filel[0])
   xdata = get_column_data(data, 1)
-  fancyhist(xdata, bins = "scott", density = False, histtype = "step", label = "Cm244")
+  fancyhist(xdata, bins = "scott", density = True, histtype = "step", label = "Cm244")
 
   #Display Plot
   plt.legend()
-  plt.xlabel(COLUMNS[1])
+  plt.xlabel("E$_{n}$(MeV)")
   plt.savefig("energy_spectrum.png")
   plt.show()

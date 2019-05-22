@@ -17,6 +17,18 @@ import re
 from data_operations import *
 from file_operations import *
 
+def atoi(text):
+    return int(text) if text.isdigit() else text
+
+def natural_keys(text):
+    '''
+    alist.sort(key=natural_keys) sorts in human order
+    http://nedbatchelder.com/blog/200712/human_sorting.html
+    (See Toothy's implementation in the comments)
+    '''
+    
+    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
+
 COLUMNS = ["event_id",
            "vertx", 
            "verty",
@@ -34,7 +46,7 @@ COLUMNS = ["event_id",
            "parentid",
            "cstep",
            "initenergy"]
-plt.figure(figsize = (20, 10))
+plt.figure()#figsize = (20, 10))
 
 if __name__ == "__main__":
   #Grab all pmthit files in the specified directory
@@ -61,17 +73,20 @@ if __name__ == "__main__":
   
   ylimit = 0
 
+  #Sort to better keep track of progress in console output
+  file_list.sort(key = natural_keys)
+
   #Iterate over every file and perform data analysis
   for pmt_file in file_list:
+    print(pmt_file)
     data = open_file(pmt_file)
 
-
     #Remove electron recoils
-    data = data[data[4] != 11]
+    #data = data[data[4] != 11]
 
     xdata = get_column_data(data, column_id)
 
-    n = create_histogram(pmt_file, xdata, tot_events, thresh, rate)
+    n = create_histogram(pmt_file, xdata, tot_events, thresh, rate, data)
 
     #Set ylimits to be max of the trimmed xdata
     if max(n[1:]) > ylimit:
@@ -86,6 +101,6 @@ if __name__ == "__main__":
   plt.text(thresh + 0.5, ylimit + (ylimit / 20), "Bubble Nucleation Threshold", color = "r")
   plt.legend()
   plt.ylim([0, ylimit + ylimit / 10])
-  plt.xlabel(COLUMNS[column_id])
+  plt.xlabel(COLUMNS[column_id] + "(keV)")
   plt.savefig("histogram_{}".format(file_label))
   plt.show()
