@@ -32,6 +32,11 @@ def E_n(target, E_gamma, Q = 0, theta = 0):
         return ((A - 1) / A) * (E_gamma - Q - (E_gamma**2 / (1862 * \
                 (A - 1)))) + delta(A, E_gamma, Q, theta)
     else:
+        print(A, E_gamma, Q)
+        print(((A - 1) / A) * (E_gamma - Q - (E_gamma**2 / (1862 * \
+                (A - 1)))))
+        print(delta_max(A, E_gamma, Q, theta))
+        print(delta(A, E_gamma, Q, 0))
         return ((A - 1) / A) * (E_gamma - Q - (E_gamma**2 / (1862 * \
                 (A - 1)))) + delta_max(A, E_gamma, Q, theta)
 
@@ -89,5 +94,6 @@ if PLOT:
     ax.set_xlabel('$\\theta$')
     ax.set_ylabel('E$_n$ (keV)')
     create_pi_labels(min(x) / pi, max(x) / pi, 0.5, ax, "x")
+    plt.scatter([0], [94.14])
     ax.set_title('Neutron Energy Distributions over $\\theta$')
     plt.show()

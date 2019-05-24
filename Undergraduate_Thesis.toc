@@ -2,17 +2,16 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}% 
 \contentsline {subsection}{\numberline {1.1}Dark Matter \& Bubble Chambers}{3}{subsection.1.1}% 
 \contentsline {subsection}{\numberline {1.2}Low Energy Neutrons}{6}{subsection.1.2}% 
-\contentsline {section}{\numberline {2}Methods}{7}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Identifying the Proper Gamma Source}{7}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Calculations}{8}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}Choosing a Source}{10}{subsection.2.3}% 
-\contentsline {subsection}{\numberline {2.4}Improved Neutron Rates}{11}{subsection.2.4}% 
-\contentsline {section}{\numberline {3}Analysis}{13}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Emission Type}{14}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Distance From Detector}{15}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Particle Guide}{16}{subsection.3.3}% 
-\contentsline {subsection}{\numberline {3.4}$^{244}$Cm Source}{17}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}Bubble Rates}{18}{subsection.3.5}% 
-\contentsline {section}{\numberline {4}Conclusion}{20}{section.4}% 
-\contentsline {section}{References}{21}{section*.15}% 
-\contentsline {section}{Appendix A: $\gamma $-neutron Cross Section Plots}{22}{section*.16}% 
+\contentsline {section}{\numberline {2}Methods}{8}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Identifying the Proper Gamma Source}{8}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Calculating Expected Neutron Energies and Emission Rates}{9}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Narrowing Down Our List of Gamma Sources}{11}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Improving Neutron Emission Rate Estimations}{12}{subsection.2.4}% 
+\contentsline {section}{\numberline {3}Analysis}{14}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Using GEANT4 For Simulating $^{207}$Bi-Be Neutron Source}{14}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Location of Neutron Source Relative to the Target Volume}{16}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Additional Testing With $^{244}$Cm Source}{18}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Expected Bubble Multiplicity and Rates}{19}{subsection.3.4}% 
+\contentsline {section}{\numberline {4}Conclusion}{21}{section.4}% 
+\contentsline {section}{References}{22}{section*.15}% 
+\contentsline {section}{Appendix A: $\gamma $-neutron Cross Section Plots}{23}{section*.16}% 
