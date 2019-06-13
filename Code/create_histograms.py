@@ -46,7 +46,7 @@ COLUMNS = ["event_id",
            "parentid",
            "cstep",
            "initenergy"]
-plt.figure()#figsize = (20, 10))
+plt.figure()#figsize = (10, 5))
 
 if __name__ == "__main__":
   #Grab all pmthit files in the specified directory
@@ -100,7 +100,9 @@ if __name__ == "__main__":
   plt.axvline(x = thresh, color = "r")
   plt.text(thresh + 0.5, ylimit + (ylimit / 20), "Bubble Nucleation Threshold", color = "r")
   plt.legend()
-  plt.ylim([0, ylimit + ylimit / 10])
-  plt.xlabel(COLUMNS[column_id] + "(keV)")
+  #plt.ylim([0, ylimit + ylimit / 10])
+  plt.xlabel("E$_{n}$(keV)")
+  plt.semilogy()
+  plt.ylabel("Neutron Hit Count")
   plt.savefig("histogram_{}".format(file_label))
   plt.show()

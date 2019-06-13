@@ -112,12 +112,9 @@ def plot_separate_multiplicities(particle_files, rate):
 
             #Get data
             xdata = get_column_data(data, column_id)
-            
+
             #Iterate over every energy threshold
             for j, energy in enumerate(thresh_range):
-                #Filter events below threshold
-                xdata = xdata[xdata >= energy]
-
                 #Get bubble rates
                 bubble_rate, event_n_bubbles, event_time = calculate_bubble_rates(xdata, tot_events, energy, rate, True, data, True)
 
@@ -235,9 +232,6 @@ if __name__ == "__main__":
 
             #Iterate over every energy threshold
             for j, energy in enumerate(thresh_range):
-                #Filter events below threshold
-                xdata = xdata[xdata >= energy]
-
                 #Get bubble rates
                 bubble_rate, event_n_bubbles, event_time = calculate_bubble_rates(xdata, tot_events, energy, rate, True, data)
 

@@ -138,5 +138,6 @@ if __name__ == "__main__":
 
   plt.xlabel("Threshold Energy (keV)")
   plt.ylabel("Average bubble multiplicity")
+  plt.semilogy()
   plt.legend(["PICO-40L", "PICO-500"], loc = "best")
   plt.show()
