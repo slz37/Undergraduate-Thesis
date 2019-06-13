@@ -373,5 +373,8 @@ aps,
 
 	\par The create\_split\_histograms.py file is an extension of the original histogram python script. This particular script was used to explored the possibility of the neutron spectrum resembling the $\nu$ spectrum. This script normalizes the neutron spectrum to match the $\nu$ spectrum at around 3 keV; however, the spectra did not match close enough as we had hoped. This script does not have much use outside of this scenario, so unless you are exploring a similar comparison of spectra, you will probably not need to use this script. Figure 13A shows what the output looked for the scenario I described above.
 	\par The final two files work together to plot the spectrum of a non-monoenergetic source. This requires you to first pipe the output of the compile.sh script to some file. Then, the read\_output.sh script will scan that file for the energies and event numbers. Finally, the energy\_distribution.py file takes the output of the previous script and creates a histogram as seen in Figure 13B. This was useful to ensure that the spectrum of emitted particles matched what the actual source's spectrum would look like. These files won't be very useful for monoenergetic sources, and their only real use is if you suspect that there are issues with the emission spectra.
+	
+	\section{Conclusion}
+	\par This manual was written fairly hastily, and as a result, it is not as clear and detailed as I would like it to be. Hopefully it has helped you in some way or another. If you make any changes to the simulation code, find errors or bugs anywhere, or add additional analysis code, feel free to update the manual as you see fit.
 
 \end{document}

@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {3.2}Bash Scripts For Automation}{6}{subsection.3.2}% 
 \contentsline {subsection}{\numberline {3.3}Setting Up Macro Files}{8}{subsection.3.3}% 
 \contentsline {section}{\numberline {4}Analysis Code}{10}{section.4}% 
+\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}% 

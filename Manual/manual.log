@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  12 JUN 2019 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  13 JUN 2019 00:53
 entering extended mode
 **./manual.tex
 (manual.tex
@@ -1376,14 +1376,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
  []
 
 [2]
-<Images/svn_file_structure_test.png, id=84, 723.45282pt x 554.07pt>
+<Images/svn_file_structure_test.png, id=89, 723.45282pt x 554.07pt>
 File: Images/svn_file_structure_test.png Graphic file (type png)
 <use Images/svn_file_structure_test.png>
 Package pdftex.def Info: Images/svn_file_structure_test.png  used on input line
  120.
 (pdftex.def)             Requested size: 470.23877pt x 360.14124pt.
  [3 <./Images/svn_file_structure_test.png>]
-<Images/detector_construction_cc_test.png, id=92, 763.35187pt x 594.72188pt>
+<Images/detector_construction_cc_test.png, id=97, 763.35187pt x 594.72188pt>
 File: Images/detector_construction_cc_test.png Graphic file (type png)
 <use Images/detector_construction_cc_test.png>
 Package pdftex.def Info: Images/detector_construction_cc_test.png  used on inpu
@@ -1473,18 +1473,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--238
  []
 
 [7]
-<Images/verbosities.png, id=115, 359.09157pt x 146.79843pt>
+<Images/verbosities.png, id=120, 359.09157pt x 146.79843pt>
 File: Images/verbosities.png Graphic file (type png)
 <use Images/verbosities.png>
 Package pdftex.def Info: Images/verbosities.png  used on input line 249.
 (pdftex.def)             Requested size: 359.09068pt x 146.79807pt.
-<Images/draw.png, id=116, 359.09157pt x 70.76437pt>
+<Images/draw.png, id=121, 359.09157pt x 70.76437pt>
 File: Images/draw.png Graphic file (type png)
 <use Images/draw.png>
 Package pdftex.def Info: Images/draw.png  used on input line 257.
 (pdftex.def)             Requested size: 359.09068pt x 70.76419pt.
  [8 <./Images/verbosities.png> <./Images/draw.png>]
-<Images/file.png, id=123, 359.09157pt x 39.89906pt>
+<Images/file.png, id=128, 359.09157pt x 39.89906pt>
 File: Images/file.png Graphic file (type png)
 <use Images/file.png>
 Package pdftex.def Info: Images/file.png  used on input line 265.
@@ -1495,29 +1495,29 @@ Overfull \hbox (61.09396pt too wide) in paragraph at lines 269--270
 call back to the PICO250DetectorConstruction.cc
  []
 
-<Images/detectors.png, id=124, 359.09157pt x 68.50594pt>
+<Images/detectors.png, id=129, 359.09157pt x 68.50594pt>
 File: Images/detectors.png Graphic file (type png)
 <use Images/detectors.png>
 Package pdftex.def Info: Images/detectors.png  used on input line 273.
 (pdftex.def)             Requested size: 359.09068pt x 68.50577pt.
-<Images/gamma_wall.png, id=125, 359.09157pt x 38.39343pt>
+<Images/gamma_wall.png, id=130, 359.09157pt x 38.39343pt>
 File: Images/gamma_wall.png Graphic file (type png)
 <use Images/gamma_wall.png>
 Package pdftex.def Info: Images/gamma_wall.png  used on input line 281.
 (pdftex.def)             Requested size: 359.09068pt x 38.39333pt.
-<Images/grdm.png, id=126, 359.09157pt x 51.19125pt>
+<Images/grdm.png, id=131, 359.09157pt x 51.19125pt>
 File: Images/grdm.png Graphic file (type png)
 <use Images/grdm.png>
 Package pdftex.def Info: Images/grdm.png  used on input line 289.
 (pdftex.def)             Requested size: 359.09068pt x 51.19112pt.
 [9 <./Images/file.png> <./Images/detectors.png> <./Images/gamma_wall.png> <./Im
 ages/grdm.png>]
-<Images/properties.png, id=135, 359.09157pt x 207.02344pt>
+<Images/properties.png, id=140, 359.09157pt x 207.02344pt>
 File: Images/properties.png Graphic file (type png)
 <use Images/properties.png>
 Package pdftex.def Info: Images/properties.png  used on input line 297.
 (pdftex.def)             Requested size: 359.09068pt x 207.02292pt.
-<Images/output.png, id=136, 359.09157pt x 85.82062pt>
+<Images/output.png, id=141, 359.09157pt x 85.82062pt>
 File: Images/output.png Graphic file (type png)
 <use Images/output.png>
 Package pdftex.def Info: Images/output.png  used on input line 305.
@@ -1532,13 +1532,13 @@ Overfull \hbox (3.24208pt too wide) in paragraph at lines 314--324
 [][] 
  []
 
-<Images/particle_guide_log.png, id=143, 722.7pt x 361.35pt>
+<Images/particle_guide_log.png, id=148, 722.7pt x 361.35pt>
 File: Images/particle_guide_log.png Graphic file (type png)
 <use Images/particle_guide_log.png>
 Package pdftex.def Info: Images/particle_guide_log.png  used on input line 328.
 
 (pdftex.def)             Requested size: 469.74944pt x 234.87471pt.
-<Images/bubble_mult.png, id=144, 462.528pt x 346.896pt>
+<Images/bubble_mult.png, id=149, 462.528pt x 346.896pt>
 File: Images/bubble_mult.png Graphic file (type png)
 <use Images/bubble_mult.png>
 Package pdftex.def Info: Images/bubble_mult.png  used on input line 335.
@@ -1548,7 +1548,7 @@ Overfull \hbox (23.48918pt too wide) in paragraph at lines 335--336
  [][] 
  []
 
-<Images/18mm_thresh.png, id=145, 462.528pt x 346.896pt>
+<Images/18mm_thresh.png, id=150, 462.528pt x 346.896pt>
 File: Images/18mm_thresh.png Graphic file (type png)
 <use Images/18mm_thresh.png>
 Package pdftex.def Info: Images/18mm_thresh.png  used on input line 339.
@@ -1568,7 +1568,7 @@ Overfull \hbox (19.17033pt too wide) in paragraph at lines 349--360
 [][] 
  []
 
-<Images/recoil_combined_normed.png, id=153, 462.528pt x 346.896pt>
+<Images/recoil_combined_normed.png, id=158, 462.528pt x 346.896pt>
 File: Images/recoil_combined_normed.png Graphic file (type png)
 <use Images/recoil_combined_normed.png>
 Package pdftex.def Info: Images/recoil_combined_normed.png  used on input line 
@@ -1579,7 +1579,7 @@ Overfull \hbox (23.48918pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
-<Images/cm244_spectrum.png, id=154, 462.528pt x 346.896pt>
+<Images/cm244_spectrum.png, id=159, 462.528pt x 346.896pt>
 File: Images/cm244_spectrum.png Graphic file (type png)
 <use Images/cm244_spectrum.png>
 Package pdftex.def Info: Images/cm244_spectrum.png  used on input line 369.
@@ -1596,24 +1596,24 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 363--371
 
 [12 <./Images/bubble_mult.png> <./Images/18mm_thresh.png>] [13 <./Images/recoil
 _combined_normed.png> <./Images/cm244_spectrum.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 377.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
  (manual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
 Package rerunfilecheck Info: File `manual.out' has not changed.
-(rerunfilecheck)             Checksum: F087F5177BE137E9115D1A9F37E15F90;717.
+(rerunfilecheck)             Checksum: 0421D9D8A5C68178D9F4383E03976CB8;764.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 377.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
  ) 
 Here is how much of TeX's memory you used:
- 33396 strings out of 492945
- 644170 string characters out of 3135516
- 716207 words of memory out of 3000000
- 36701 multiletter control sequences out of 15000+200000
+ 33398 strings out of 492945
+ 644190 string characters out of 3135516
+ 716206 words of memory out of 3000000
+ 36702 multiletter control sequences out of 15000+200000
  550235 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,17n,77p,883b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1628,9 +1628,9 @@ KTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Luke\AppData
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manual.pdf (13 pages, 599361 bytes).
+Output written on manual.pdf (13 pages, 600672 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
