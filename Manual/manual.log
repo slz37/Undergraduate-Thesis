@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  12 JUN 2019 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  12 JUN 2019 23:20
 entering extended mode
-**./readme.tex
-(readme.tex
+**./manual.tex
+(manual.tex
 LaTeX2e <2018-12-01>
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -1204,7 +1204,7 @@ LaTeX Info: Redefining \\ on input line 3056.
 LaTeX Warning: Unused global option(s):
     [reprint,amsmath,amssymb,aps].
 
-(readme.aux
+(manual.aux
 
 LaTeX Warning: Label `tab:table-name' multiply defined.
 
@@ -1242,7 +1242,7 @@ LaTeX Warning: Label `tab:table-name' multiply defined.
 LaTeX Warning: Label `tab:table-name' multiply defined.
 
 )
-\openout1 = `readme.aux'.
+\openout1 = `manual.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
@@ -1359,14 +1359,14 @@ LaTeX Info: Redefining \ref on input line 71.
 LaTeX Info: Redefining \pageref on input line 71.
 LaTeX Info: Redefining \nameref on input line 71.
 
-(readme.out) (readme.out)
+(manual.out) (manual.out)
 \@outlinefile=\write4
-\openout4 = `readme.out'.
+\openout4 = `manual.out'.
 
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-(readme.toc)
+(manual.toc)
 \tf@toc=\write5
-\openout5 = `readme.toc'.
+\openout5 = `manual.toc'.
 
  [1
 
@@ -1598,10 +1598,10 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 363--371
 _combined_normed.png> <./Images/cm244_spectrum.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 377.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
- (readme.aux)
+ (manual.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
-Package rerunfilecheck Info: File `readme.out' has not changed.
+Package rerunfilecheck Info: File `manual.out' has not changed.
 (rerunfilecheck)             Checksum: F087F5177BE137E9115D1A9F37E15F90;717.
 
 
@@ -1611,7 +1611,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 377.
  ) 
 Here is how much of TeX's memory you used:
  33396 strings out of 492945
- 643911 string characters out of 3135516
+ 644170 string characters out of 3135516
  716207 words of memory out of 3000000
  36701 multiletter control sequences out of 15000+200000
  550235 words of font info for 71 fonts, out of 3000000 for 9000
@@ -1628,7 +1628,7 @@ KTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Luke\AppData
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on readme.pdf (13 pages, 599361 bytes).
+Output written on manual.pdf (13 pages, 599361 bytes).
 PDF statistics:
  476 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)
